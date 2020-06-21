@@ -1,0 +1,13 @@
+<p>eventbinding works!</p>
+
+<button (click)="counter=counter+1"> Counter ++ </button>
+
+<button (click)="clickHandler()"> Counter ++ </button>
+
+<p>{{counter}}</p>
+
+<input type="text" (keyup)="keyHandler($event)" [value]="data" />
+
+<p>{{data}}</p>
+
+<input type="text" [(ngModel)]="data" />

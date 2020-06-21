@@ -1,0 +1,48 @@
+<p [style.color]="'red'" [style.font-size.%]="'150'">Angular Data Binding</p>
+
+{{title}}
+
+<p [class]="'blue'">{{getTitle()}}</p>
+
+<p class="blue">One-way Data Bindig: {{title}}</p>
+
+<p [innerText]="html"></p>
+
+<p [innerHtml]="html"></p>
+
+<h1 [innerText]="'Hello World'"></h1>
+
+<span [innerText]="title"></span>
+
+<br>
+
+<input type="text" [value]="title" />
+
+<br>
+
+<input type="text" value="{{title}}" />
+
+<br>
+
+<input type="checkbox" checked />
+
+<br>
+
+<input type="checkbox" [checked] = "isChecked" />
+
+<button disabled>Click Me1</button>
+
+<button [disabled]="isChecked" [hidden]="!isChecked">Click Me</button>
+
+<p [class.red]="isChecked">CSS Class Demo</p>
+
+<p [class]="{'blue': isChecked}">CSS Class Demo</p>
+
+<p [class]="isChecked?'red':'blue'">CSS Class Demo</p>
+
+
+
+
+
+
+
