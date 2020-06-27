@@ -1,0 +1,53 @@
+<h3>{{title}}</h3>
+
+<!--npm i -g @angular/cli-->
+<!--ng update @angular/cli @angular/core -->
+
+<!-- <div>
+  {{skills | json}}
+</div> -->
+
+<h3>Radio Buttons</h3>
+<div>
+  <span *ngFor="let skill of skills">
+    <input name="skill" type="radio" [checked]="skill.name == 'ES6'" (change)="selectionChanged(skill)" />{{skill.name}}
+  </span>
+</div>
+<br />
+<div>
+  {{selected | json}}
+</div>
+
+<h3>Select Dropdown</h3>
+<div>
+  <select [(ngModel)]="sel">
+    <option *ngFor="let s of skills">
+      {{s.name}}
+    </option>
+  </select>
+</div>
+<div>{{sel}}</div>
+
+<h3>*ngFor Structural Directive</h3>
+<div>
+  <ul>
+    <li (mouseenter)="selected=x" [class.active]="selected.name==x.name" (click)="selectionChanged(x)" [class.odd]="o" [class.even]="e" *ngFor="let x of skills; let i=index; let o=odd; let e=even">{{i+1}}-{{x.name}}-{{o}}-{{e}}</li>
+  </ul>
+</div>
+<h3>*ngIf...else</h3>
+
+<div *ngIf="selected.name == 'NG'; else other">
+  Angular-10
+</div>
+<ng-template #other>
+  Other
+</ng-template>
+
+
+<h3>ngSwitch...ngSwitchCase...ngDefaultCase</h3>
+<div [ngSwitch]="sel">
+  <div *ngSwitchCase="'JS'">JAvascript</div>
+  <div *ngSwitchCase="'ES6'">ECMASCript2015</div>
+  <div *ngSwitchCase="'NG'">Angular</div>
+  <div *ngSwitchDefault>Typescript</div>
+</div>]
