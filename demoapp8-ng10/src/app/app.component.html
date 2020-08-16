@@ -1,0 +1,9 @@
+<app-comp-a message="msg from parent app component"></app-comp-a>
+
+<app-comp-a [message]="'msg2 from parent app component'"></app-comp-a>
+
+<app-comp-b [x]="'hello from parent'"></app-comp-b>
+
+<app-comp-b1></app-comp-b1>
+
+<app-comp-c (msgFromChild)="messageReceived($event)"></app-comp-c>
