@@ -1,0 +1,11 @@
+<p>persons works!</p>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Location</th>
+    </tr>
+    <tr *ngFor="let person of persons">
+        <td>{{person.name}}</td>
+        <td>{{person.location}}</td>
+    </tr>
+</table>

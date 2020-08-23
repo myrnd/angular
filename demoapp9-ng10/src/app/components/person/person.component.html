@@ -1,0 +1,8 @@
+<p>person works!</p>
+<input type="text" [(ngModel)]="person.name" />
+<input type="text" [(ngModel)]="person.location" />
+<input type="button" value="Submit" (click)="save()" />
+
+<br />
+<br />
+{{person | json}}
