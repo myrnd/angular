@@ -1,0 +1,7 @@
+<p>app component works!</p>
+
+<form [formGroup]="userForm" (ngSubmit)="onSave()">
+  <input type="text" formControlName="userName" />
+  <input type="email" formControlName="email" />
+  <input [disabled]="!userForm.valid" type="submit" value="Submit" />
+</form>
